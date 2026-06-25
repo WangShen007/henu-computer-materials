@@ -1,0 +1,44 @@
+﻿<Page x:Class="ExampleWpfApp.Ch08.Z08ProgressBar"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleWpfApp.Ch08"
+      xmlns:z="clr-namespace:Wpfz;assembly=Wpfz"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProgressBar">
+    <StackPanel>
+        <WrapPanel>
+            <CheckBox VerticalAlignment="Center"
+                      x:Name="cbActive1"
+                      IsChecked="True" Margin="5">齿轮形进度条</CheckBox>
+            <z:BusyBox Width="80" Height="80"
+                       Foreground="Black" Background="Red" Margin="5"
+                       IsActive="{Binding IsChecked ,ElementName=cbActive1}" />
+            <CheckBox x:Name="cbActive2" VerticalAlignment="Center"
+                      Margin="40 5 5 5" IsChecked="True">半圆形进度条</CheckBox>
+            <z:Progressz Width="70" Height="70" 
+                         Foreground="Red" Margin="5"
+                         IsActive="{Binding IsChecked ,ElementName=cbActive2}" />
+        </WrapPanel>
+        <WrapPanel Height="200">
+            <Grid>
+                <ProgressBar Name="pro1"
+                             Style="{StaticResource ProgressBarSimpleStyle}"
+                             Value="{Binding Percent,Mode=OneWay}"
+                             Margin="0"
+                             Width="200" Height="50"
+                             BorderThickness="20"
+                             BorderBrush="#EF436F"/>
+                <TextBlock FontSize="30"
+                           Text="{Binding Value,Mode=OneWay,ElementName=pro2,StringFormat=p1}"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+            </Grid>
+            <z:Buttonz Name="btnzSuccess" Content="成功" Margin="10"/>
+            <z:Buttonz Name="btnzFail" Content="失败" Margin="10"/>
+            <z:Buttonz Name="btnzReset" Content="重置" Margin="10"/>
+        </WrapPanel>
+    </StackPanel>
+</Page>

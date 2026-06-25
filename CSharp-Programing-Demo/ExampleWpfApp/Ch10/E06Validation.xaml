@@ -1,0 +1,84 @@
+﻿<Page x:Class="ExampleWpfApp.Ch10.E06Validation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleWpfApp.Ch10"
+      xmlns:z="clr-namespace:Wpfz;assembly=Wpfz"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="数据验证示例">
+    <Page.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="BirthDateTemplate">
+                <TextBlock Text="{Binding ChuShengRiQi, StringFormat=yyyy-MM-dd}" />
+            </DataTemplate>
+            <Style x:Key="TextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource TextBoxLabelStyle}">
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="Width" Value="150"/>
+                <Style.Triggers>
+                    <Trigger Property="Validation.HasError" Value="true">
+                        <Setter Property="Validation.ErrorTemplate">
+                            <Setter.Value>
+                                <ControlTemplate>
+                                    <DockPanel LastChildFill="True">
+                                        <TextBlock DockPanel.Dock="Right" Foreground="Red" FontSize="12pt"
+                                             Text="{Binding ElementName=MyAdorner, Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
+                                        </TextBlock>
+                                        <Image DockPanel.Dock="Right" Width="20" Source="/Resources/Images/sad.png" />
+                                        <Border BorderBrush="Red" BorderThickness="1">
+                                            <AdornedElementPlaceholder Name="MyAdorner" />
+                                        </Border>
+                                    </DockPanel>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <StackPanel>
+        <DataGrid Name="dataGrid1" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="学号" Binding="{Binding XueHao}" />
+                <DataGridTextColumn Header="姓名" Binding="{Binding XingMing}" />
+                <DataGridTextColumn Header="性别" Binding="{Binding XingBie}" />
+                <DataGridTemplateColumn Header="出生日期" SortMemberPath="出生日期"
+                                        CellTemplate="{StaticResource BirthDateTemplate}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Name="StackPanelDetail">
+            <StackPanel HorizontalAlignment="Center" DataContext="{Binding ElementName=dataGrid1, Path=SelectedItem}">
+                <TextBox Style="{StaticResource TextBoxStyle}" z:Attach.Label="学号">
+                    <TextBox.Text>
+                        <Binding Path="XueHao" UpdateSourceTrigger="PropertyChanged" ValidatesOnExceptions="True">
+                            <Binding.ValidationRules>
+                                <local:StudentValidation IsXueHaoValidation="True" ValidatesOnTargetUpdated="True"/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <TextBox Style="{StaticResource TextBoxStyle}" z:Attach.Label="姓名">
+                    <TextBox.Text>
+                        <Binding Path="XingMing" UpdateSourceTrigger="PropertyChanged" ValidatesOnExceptions="True">
+                            <Binding.ValidationRules>
+                                <local:StudentValidation IsXingMingValidation="True" ValidatesOnTargetUpdated="True"/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <TextBox Style="{StaticResource TextBoxStyle}" z:Attach.Label="性别">
+                    <TextBox.Text>
+                        <Binding Path="XingBie" UpdateSourceTrigger="PropertyChanged" ValidatesOnExceptions="True">
+                            <Binding.ValidationRules>
+                                <local:StudentValidation IsXingBieValidation="True" ValidatesOnTargetUpdated="True"/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+            </StackPanel>
+            <Button Name="btnSave" Content="保存（更新数据库）" Margin="10" Padding="30 2" HorizontalAlignment="Center" />
+        </StackPanel>
+    </StackPanel>
+</Page>

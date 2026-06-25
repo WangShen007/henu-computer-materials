@@ -1,0 +1,26 @@
+﻿<Page x:Class="ExampleWpfApp.Ch07.OtherDemos.LinqToXML.DemoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleWpfApp.Ch07.OtherDemos.LinqToXML"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Ex02DemoPage">
+    <Grid TextBlock.FontSize="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="LINQ to XML基本用法。" FontSize="20" HorizontalAlignment="Center" />
+            <TextBlock Name="textBlock1"/>
+        </StackPanel>
+        <Separator Grid.Row="1" Margin="0 20" />
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button Content="创建并保存XML" Tag="1" Click="Button_Click"/>
+            <Button Content="加载并查询XML" Tag="2" Margin="20 0 0 0" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

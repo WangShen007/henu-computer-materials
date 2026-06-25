@@ -1,0 +1,51 @@
+﻿{
+   "CodeGenerationMode": 3,
+   "ContextClassName": "MyDb1Context",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "ch05\\Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "ClientWinFormsExamples",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[JBXX]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KCBM]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KCCJ]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "MyDb1.mdf",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": true,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

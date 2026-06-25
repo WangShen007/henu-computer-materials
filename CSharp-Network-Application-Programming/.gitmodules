@@ -1,0 +1,3 @@
+[submodule "CSharp-Network-Demo"]
+	path = CSharp-Network-Demo
+	url = https://github.com/Henu-Kaguya/CSharp-Network-Demo.git

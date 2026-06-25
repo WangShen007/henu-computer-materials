@@ -1,0 +1,23 @@
+﻿<Page x:Class="FuLuAWpfApp.A07.PageA0701"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FuLuAWpfApp.A07"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageA0701">
+    <StackPanel>
+        <TextBlock FontSize="20" Margin="0 10">
+            【A.7.1】简要回答实体框架提供哪些数据库开发模式，各适用于什么场合？
+        </TextBlock>
+        <Separator/>
+        <TextBlock xml:space="preserve" LineHeight="20">
+【答】
+（1）实体框架提供了数据库优先、模型优先和代码优先三种开发模式。
+（2）数据库优先（Database First）：适用于数据库结构变化较少或者已经存在数据库的场合。
+         模型优先（Model First）：适用于需求分析阶段的数据库结构设计。
+         代码优先（Code First）：适用于详细设计阶段的数据库应用开发。
+        </TextBlock>
+    </StackPanel>
+</Page>

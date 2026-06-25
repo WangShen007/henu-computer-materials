@@ -1,0 +1,30 @@
+﻿<Page x:Class="ExampleWpfApp.Ch11.Z02"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleWpfApp.Ch11"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Z02">
+    <TabControl>
+        <TabItem Header="Demo1">
+            <Frame Source="Z02_Demo1.xaml"/>
+        </TabItem>
+        <TabItem Header="Demo2">
+            <Frame Source="Z02_Demo2.xaml"/>
+        </TabItem>
+        <TabItem Header="Demo3">
+            <Frame Source="Z02_Demo3.xaml"/>
+        </TabItem>
+        <TabItem Header="Demo4">
+            <Frame Source="Z02_Demo4.xaml"/>
+        </TabItem>
+        <TabItem Header="Demo5">
+            <Frame Source="Z02_Demo5.xaml"/>
+        </TabItem>
+        <TabItem Header="Demo6">
+            <Frame Source="Z02_Demo6.xaml"/>
+        </TabItem>
+    </TabControl>
+</Page>

@@ -1,0 +1,108 @@
+## 软件工程试卷集
+
+选择10 \* 2
+判断 5 \* 2
+简答 5\*6
+大题1. 结构化分析设计20
+大题2. 面向对象分析设计20
+
+
+## 第一套
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1f3e8b7ab4d83eba90f4c49649fc7f87.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5d56637d7b277abf28e6e2d71409b768.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7a534204af44beeaa1d6341e626f00c5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d6151b0c5059cdd7f6dfa833c98bcc86.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dbbe0285eba87af1855dbdc545a63437.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9f07825fd8b740e72609daa1749c0f50.png)
+答案如下：
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1a17e35bae5f56c2b8ec63ca9df4f2cc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b22a0527cd6868a1e5f527d436620699.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d7b0d9f6a18cdd7e08bb4489e8465d20.png)
+
+## 第二套
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/422d7d33caa28cac2fa0e87bc586ad30.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8b0c3dd6c81d94101f0c7f4f39852fd5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7f1292570e8d087267c6d0e1a20467b2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bf89cc43c09d9ffe7f15d4d80eeec070.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f6d3e5a8c426e3e83a32b398cc7ad51d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6c6856adb56ec7e32d86138c7078722c.png)
+答案
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b06fafa2d3619630b9c694a45351703c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/48468c8d24c9949b1efcd5855f99b8fd.png)
+
+## 第三套
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/747be220b84dcb7fa56717a7c95d3038.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/18a2efc77c88cf49e8887c2ff5068df4.png)
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6e8da1fb0d742a210bc71cd8963c2ac2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1c4975e20da09123c9c3b55a96aaf639.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dc3d2eff54092192e5452840956db71e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cb3236e11eb55e71bc9538d5136c3742.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/819cd735e1fdf6228071e08d11dc0e9d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/abcbdbc379811f8bd41351542fec1a38.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dff05960f3a0bf47d09338d4bb9872d6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b8e75e0e1a3c8d6bcced98942451b606.png)
+答案
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/af0d687296248e2a67e63669beb897a3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e12fbab89dc2bdf86fa1c9c7eacb0183.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/78188ccd99b9c0836e9fa728fcd55a9c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8284ad81515ac1ca63bc8506b727dce7.png)
+
+## 第四套
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2766d47e9eb653073020060abfa3c23d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5f87ab789aba594e502bee8a82ca2b42.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f8d865ebc82c30793ae8001e32117feb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9d9be355ccd64ab95cba88cbcd03cf8f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6290973d052d956d98aa1586579b0e29.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d55a62c4f87d6e072329e120c53b75e7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7ff6681d52ecb00158038cde5e5c9e11.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6b49cf9abb7fed503d73d2185f01fffe.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1204c8df17bb8c2edebd8222e4999b35.png)
+答案
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c7b75700d6270ab962cc24b854c0a8c5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fa9b17bfad6926b8918c26c4bfd1a5f3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e0d528dd59c5af7cda163ab87505d58e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6c1478fdf5a34a2318149106eb75c117.png)
+
+## 第五套
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0cd6ea904aefa543ab093f0ac8b72005.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/280da48de7e569cfda9b31447152a7e4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dad050853b81fc498eb50e3148bb1419.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b5123e50b23251e47dd5e6efad8a05f3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/be395111205a3c895e312b93e9d5f111.png)
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/506cf5c72580c131a4e6bed97ec968ad.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/895ce05b31ddee58b6b560b74f693dbb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8721eb7b8b29d3c8d1628315f51a2699.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bd9e69b7fa7e838de7fabc49d71ed375.png)
+
+答案：
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3f11babe486376c30b5eb9cc1bee83c1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/75d1f4cadadeff0f1ac1ade05af8552d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0b8a5133db429d1896407c39fbdca0ed.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/42fe8371d36c68bb88f7c493376cf9e4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c4a7cb60a6c1923a69fba5f29d28978a.png)
+
+## 第六套
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/25b3ec8047f4d55eecaf0b190e963b3e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/94951f64e9132fdd13c6db5455cde2c6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8e9c9015d07bdab5e694ad51e80ce3f5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bb73348e4e346857733d97858ad571f6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7626a07eb8bcd63f25848ebbdddd388a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6810a0ee387cee7b3076f4a8c3951cb2.png)
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/021ee0fc1deeed719f03e2315508d760.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7be4444230350a341729730e0c24ec25.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/43e5a9e7cb9410c7e706c4e0e9ef39f3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c7ba68e1796298b4f07b52568cf0f63e.png)
+答案
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/10ea54c572a252beb9da8786361104d9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d873d41ec3c7bf71079e457d30f524a1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bbad27b2bd46b2d21054f170d7233c65.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5539b6afe3c3c98ccaecb73e634f081d.png)

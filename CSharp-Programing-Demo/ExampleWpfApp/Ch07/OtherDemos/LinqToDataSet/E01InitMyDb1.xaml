@@ -1,0 +1,16 @@
+﻿<Page x:Class="ExampleWpfApp.Ch07.LinqToDataSet.E01InitMyDb1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleWpfApp.Ch07.LinqToDataSet"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="E01InitMyDb1">
+    <StackPanel Margin="20" TextBlock.LineHeight="30">
+        <TextBlock>
+        提示：此功能将先删除数据库中三个表原有的所有数据，然后添加测试用的初始化数据。
+        </TextBlock>
+        <TextBlock Name="textBlock1"/>
+    </StackPanel>
+</Page>

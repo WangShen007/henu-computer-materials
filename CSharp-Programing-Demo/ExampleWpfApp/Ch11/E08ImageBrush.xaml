@@ -1,0 +1,26 @@
+﻿<Page x:Class="ExampleWpfApp.Ch11.E08ImageBrush"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleWpfApp.Ch11"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ImageBrush">
+    <Page.Resources>
+        <ImageBrush x:Key="MyImageBrushKey" ImageSource="/Resources/Images/img1.jpg" />
+    </Page.Resources>
+    <StackPanel HorizontalAlignment="Center"
+            VerticalAlignment="Center" TextBlock.FontSize="16"
+            TextBlock.Foreground="Red">
+        <StackPanel Orientation="Horizontal">
+            <Ellipse Height="80" Width="150" Fill="{StaticResource MyImageBrushKey}" />
+            <Ellipse Height="80" Width="150" StrokeThickness="20"
+                    Stroke="{StaticResource MyImageBrushKey}" />
+            <Button Height="80" Width="150" Content="按钮1" FontSize="20pt"
+                    Foreground="White" Background="{StaticResource MyImageBrushKey}" />
+        </StackPanel>
+        <TextBlock FontWeight="Bold" FontSize="48pt" HorizontalAlignment="Center"
+                Text="文本Text" Foreground="{StaticResource MyImageBrushKey}" />
+    </StackPanel>
+</Page>

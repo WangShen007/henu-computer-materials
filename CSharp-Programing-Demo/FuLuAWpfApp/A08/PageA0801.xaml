@@ -1,0 +1,39 @@
+﻿<Page x:Class="FuLuAWpfApp.A08.PageA0801"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FuLuAWpfApp.A08"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageA0801">
+    <Border Padding="15" BorderBrush="Blue" BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Orientation="Vertical">
+            <StackPanel.Resources>
+                <Style TargetType="WrapPanel">
+                    <Setter Property="Orientation" Value="Horizontal"/>
+                    <Setter Property="Margin" Value="10 5"/>
+                </Style>
+            </StackPanel.Resources>
+            <WrapPanel>
+                <Label Content="用户名：" Width="70"/>
+                <TextBox Name="userName" Height="23" Width="130"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="密码：" Width="70"/>
+                <PasswordBox Name="password"  Height="23" Width="130"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="用户类型：" />
+                <ComboBox Name="comboBox1" SelectedIndex="0" Width="130">
+                    <ComboBoxItem Content="管理员" />
+                    <ComboBoxItem Content="一般用户" />
+                </ComboBox>
+            </WrapPanel>
+            <WrapPanel HorizontalAlignment="Center">
+                <Button Name="btnOK" Content="登录" Margin="0 10 20 10" Padding="10 2" />
+                <Button Name="btnCancel" Content="取消" Margin="0 10 0 10" Padding="10 2"/>
+            </WrapPanel>
+        </StackPanel>
+    </Border>
+</Page>

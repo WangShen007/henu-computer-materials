@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ch07\E02\GobangRoom.cs" />
+    <Compile Remove="ch07\E02\GobangRoom.Designer.cs" />
+    <Compile Remove="ch07\E02\GobangRoomUC.cs" />
+    <Compile Remove="ch07\E02\GobangRoomUC.Designer.cs" />
+    <Compile Remove="ch07\E02\GobangUser.cs" />
+    <Compile Remove="ch07\E02\PlayingTable.cs" />
+    <Compile Remove="ch07\E02\PlayingTable.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="ch07\E02\GobangRoom.resx" />
+    <EmbeddedResource Remove="ch07\E02\GobangRoomUC.resx" />
+    <EmbeddedResource Remove="ch07\E02\PlayingTable.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.11" />
+  </ItemGroup>
+
+</Project>

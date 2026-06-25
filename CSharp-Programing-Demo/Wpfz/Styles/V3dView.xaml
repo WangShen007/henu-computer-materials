@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Wpfz">
+
+    <!--*************** V3dView         ****************************************-->
+    <local:BoolToVisibilityConverter x:Key="BoolToVisibility"/>
+    <Style TargetType="local:V3dView">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:V3dView">
+                    <Grid x:Name="PART_grid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Border x:Name="PART_viewport" Grid.Row="0" Background="{TemplateBinding Background}">
+                            <ContentPresenter/>
+                        </Border>
+                        <Border Grid.Row="0" Width="220" MinWidth="220"
+                                        HorizontalAlignment="Right"
+                                        VerticalAlignment="Top"
+                                        Margin="10" FocusVisualStyle="{x:Null}"
+                                        TextBlock.Foreground="Black"
+                                        Background="White" Opacity="0.5">
+                            <TextBlock Padding="4"
+                                       Text="{Binding CameraInfo, RelativeSource={RelativeSource TemplatedParent}}"     
+                                       Visibility="{Binding ShowCameraInfo, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BoolToVisibility}}" />
+                        </Border>
+                        <TextBlock Grid.Row="1" Background="Blue" Foreground="White"
+                                   FocusVisualStyle="{x:Null}"
+                                   Text="提示：滚动鼠标滚轮缩放，鼠标右键拖动旋转，双击鼠标右键还原。"
+                                   Visibility="{Binding ShowHelp, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BoolToVisibility}}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

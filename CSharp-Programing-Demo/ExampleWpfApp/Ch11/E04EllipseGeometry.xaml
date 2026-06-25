@@ -1,0 +1,25 @@
+﻿<Page x:Class="ExampleWpfApp.Ch11.E04EllipseGeometry"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleWpfApp.Ch11"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Ellipse">
+    <Canvas Name="canvas1">
+        <Path Canvas.Left="100" Canvas.Top="50" Stroke="Blue" StrokeThickness="10">
+            <Path.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FEFFFAE8" Offset="0" />
+                    <GradientStop Color="#FEFFEEBB" Offset="0.139831" />
+                    <GradientStop Color="#FFCB9F77" Offset="0.788136" />
+                    <GradientStop Color="#FFA45A42" Offset="1" />
+                </RadialGradientBrush>
+            </Path.Fill>
+            <Path.Data>
+                <EllipseGeometry RadiusX="75" RadiusY="25" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+</Page>

@@ -1,0 +1,36 @@
+﻿<Page x:Class="ExampleWpfApp.Ch03.E12foreach"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="E12foreach">
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="【例3-12】foreach语句" VerticalAlignment="Center"/>
+            <WrapPanel>
+                <WrapPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Margin" Value="10 5"/>
+                        <Setter Property="Padding" Value="10 2"/>
+                    </Style>
+                </WrapPanel.Resources>
+                <Button Name="btn1" Content="用Console实现(基本用法)" />
+                <Button Name="btn2" Content="用WPF实现(基本用法)" />
+                <Button Name="btn3" Content="用WPF实现(高级用法)" />
+            </WrapPanel>
+            <TextBlock Name="textBlock1"/>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1">
+            <ListBox Name="listBox1"/>
+        </ScrollViewer>
+        <Border BorderThickness="1" BorderBrush="Blue">
+        </Border>
+    </Grid>
+</Page>

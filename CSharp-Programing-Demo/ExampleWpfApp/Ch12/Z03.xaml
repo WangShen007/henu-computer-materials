@@ -1,0 +1,70 @@
+﻿<Page x:Class="ExampleWpfApp.Ch12.Z03"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleWpfApp.Ch12"
+      xmlns:z="clr-namespace:Wpfz;assembly=Wpfz"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Z05">
+    <Page.Resources>
+        <Storyboard x:Key="Storyboard1" RepeatBehavior="Forever" AutoReverse="False">
+            <Rotation3DAnimationUsingKeyFrames Storyboard.TargetProperty="(Visual3D.Transform).(Transform3DGroup.Children)[2].(RotateTransform3D.Rotation)" Storyboard.TargetName="ss">
+                <EasingRotation3DKeyFrame KeyTime="0">
+                    <EasingRotation3DKeyFrame.Value>
+                        <AxisAngleRotation3D Axis="0,1,0" Angle="0"/>
+                    </EasingRotation3DKeyFrame.Value>
+                </EasingRotation3DKeyFrame>
+                <EasingRotation3DKeyFrame KeyTime="0:0:1">
+                    <EasingRotation3DKeyFrame.Value>
+                        <AxisAngleRotation3D Axis="0,1,0" Angle="90"/>
+                    </EasingRotation3DKeyFrame.Value>
+                </EasingRotation3DKeyFrame>
+                <EasingRotation3DKeyFrame KeyTime="0:0:2">
+                    <EasingRotation3DKeyFrame.Value>
+                        <AxisAngleRotation3D Axis="0,1,0" Angle="180"/>
+                    </EasingRotation3DKeyFrame.Value>
+                </EasingRotation3DKeyFrame>
+                <EasingRotation3DKeyFrame KeyTime="0:0:3">
+                    <EasingRotation3DKeyFrame.Value>
+                        <AxisAngleRotation3D Axis="0,1,0" Angle="270"/>
+                    </EasingRotation3DKeyFrame.Value>
+                </EasingRotation3DKeyFrame>
+                <EasingRotation3DKeyFrame KeyTime="0:0:4">
+                    <EasingRotation3DKeyFrame.Value>
+                        <AxisAngleRotation3D Axis="0,1,0" Angle="360"/>
+                    </EasingRotation3DKeyFrame.Value>
+                </EasingRotation3DKeyFrame>
+            </Rotation3DAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
+    <Page.Triggers>
+        <EventTrigger RoutedEvent="RadioButton.Checked">
+            <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+        </EventTrigger>
+    </Page.Triggers>
+    <Grid>
+        <z:V3dView Background="AliceBlue" ShowCameraInfo="False" ShowHelp="True">
+            <Viewport3D>
+                <Viewport3D.Camera>
+                    <PerspectiveCamera Position="15,15,15" LookDirection="-15,-15,-15" UpDirection="0,1,0" />
+                </Viewport3D.Camera>
+                <ModelVisual3D>
+                    <z:DefaultLights/>
+                    <z:Cylinder Position="1,0,0"/>
+                    <z:Box Position="-4,1,1" Scale="0.5 5 0.5" RotateAngle="40">
+                        <z:Box.Material>
+                            <DiffuseMaterial Brush="Green" Color="White" AmbientColor="Yellow"/>
+                        </z:Box.Material>
+                    </z:Box>
+                    <z:Sphere x:Name="ss" Position="-4,1,1" Scale="2,2,4" RotateAxis="-3,1,1" RotateAngle="30" RotateCenter="1,0,0" Transform3dMode="RotateBySelf"/>
+                </ModelVisual3D>
+            </Viewport3D>
+        </z:V3dView>
+        <StackPanel HorizontalAlignment="Right" Width="110" Margin="20" VerticalAlignment="Top" Background="BlanchedAlmond" >
+            <RadioButton Name="r1" Margin="5" Content="自转"/>
+            <RadioButton Name="r2" Margin="5" Content="绕中心点旋转"/>
+        </StackPanel>
+    </Grid>
+</Page>

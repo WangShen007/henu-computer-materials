@@ -1,0 +1,19 @@
+﻿@page "{id=1}&{name=张三}&{age=20}"
+@model WebAppExamples.Pages.Ch09.E01WelcomeModel
+@{
+    var id = Request.RouteValues["id"];
+    var name = Request.RouteValues["name"];
+    var age = Request.RouteValues["age"];
+    var url = Request.Path;
+    var s = $"欢迎你,{age}岁的{name}，\n你访问的URL为：{url}";
+    ViewBag.Message = s;
+}
+
+<p>Html.ActionLink和ViewBag基本用法</p>
+<p>
+    @Html.ActionLink("欢迎", "E01Welcome", new { id = "2",name="李四", age=25 })
+</p>
+
+<pre>
+    @ViewBag.Message
+</pre>

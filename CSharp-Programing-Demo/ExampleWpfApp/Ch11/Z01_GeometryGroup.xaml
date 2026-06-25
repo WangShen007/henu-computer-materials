@@ -1,0 +1,82 @@
+﻿<Page x:Class="ExampleWpfApp.Ch11.Z01_GeometryGroup"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleWpfApp.Ch11"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="GeometryGroup">
+    <Page.Resources>
+        <RadialGradientBrush x:Key="rb">
+            <GradientStop Color="#FF0A8D28" Offset="0" />
+            <GradientStop Color="White" Offset="1" />
+        </RadialGradientBrush>
+        <Style TargetType="Path">
+            <Setter Property="Stroke" Value="Black" />
+            <Setter Property="Fill" Value="{StaticResource rb}" />
+            <Setter Property="StrokeThickness" Value="1" />
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="10 10 0 0" />
+        </Style>
+    </Page.Resources>
+    <StackPanel Orientation="Horizontal">
+        <StackPanel.Resources>
+            <Style TargetType="StackPanel">
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+        </StackPanel.Resources>
+        <StackPanel>
+            <Path>
+                <Path.Data>
+                    <GeometryGroup>
+                        <EllipseGeometry RadiusX="50" RadiusY="50" Center="50,75" />
+                        <EllipseGeometry RadiusX="50" RadiusY="50" Center="110,75" />
+                        <EllipseGeometry RadiusX="50" RadiusY="50" Center="80,120" />
+                    </GeometryGroup>
+                </Path.Data>
+            </Path>
+            <TextBlock Text="EvenOdd" />
+        </StackPanel>
+        <StackPanel>
+            <Path>
+                <Path.Data>
+                    <GeometryGroup FillRule="Nonzero">
+                        <EllipseGeometry RadiusX="50" RadiusY="50" Center="50,75" />
+                        <EllipseGeometry RadiusX="50" RadiusY="50" Center="110,75" />
+                        <EllipseGeometry RadiusX="50" RadiusY="50" Center="80,120" />
+                    </GeometryGroup>
+                </Path.Data>
+            </Path>
+            <TextBlock Text="Nonzero" />
+        </StackPanel>
+        <StackPanel>
+            <Path>
+                <Path.Data>
+                    <GeometryGroup FillRule="EvenOdd">
+                        <EllipseGeometry RadiusX="20" RadiusY="20" Center="100,90" />
+                        <EllipseGeometry RadiusX="40" RadiusY="40" Center="100,90" />
+                        <EllipseGeometry RadiusX="60" RadiusY="60" Center="100,90" />
+                        <EllipseGeometry RadiusX="80" RadiusY="80" Center="100,90" />
+                    </GeometryGroup>
+                </Path.Data>
+            </Path>
+            <TextBlock Text="EvenOdd" />
+        </StackPanel>
+        <StackPanel>
+            <Path>
+                <Path.Data>
+                    <GeometryGroup FillRule="Nonzero">
+                        <EllipseGeometry RadiusX="20" RadiusY="20" Center="100,90" />
+                        <EllipseGeometry RadiusX="40" RadiusY="40" Center="100,90" />
+                        <EllipseGeometry RadiusX="60" RadiusY="60" Center="100,90" />
+                        <EllipseGeometry RadiusX="80" RadiusY="80" Center="100,90" />
+                    </GeometryGroup>
+                </Path.Data>
+            </Path>
+            <TextBlock Text="Nonzero" />
+        </StackPanel>
+    </StackPanel>
+</Page>

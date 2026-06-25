@@ -1,0 +1,70 @@
+﻿<Page x:Class="ExampleWpfApp.Ch11.E10Visual"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleWpfApp.Ch11"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Visual">
+    <StackPanel>
+        <TextBlock FontSize="120pt" FontWeight="Bold" Text="视频文字" HorizontalAlignment="Center">
+            <TextBlock.Resources>
+                <MediaElement x:Key="mediaKey" Source="Resources/ContentVideo/xbox.wmv" IsMuted="False" />
+            </TextBlock.Resources>
+            <TextBlock.Foreground>
+                <VisualBrush Viewport="0,0,0.5,0.5" TileMode="Tile" Visual="{StaticResource mediaKey}" />
+            </TextBlock.Foreground>
+        </TextBlock>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel.Resources>
+                <GradientStopCollection x:Key="gsKey">
+                    <GradientStop Color="#FFFDF9F9" Offset="0" />
+                    <GradientStop Color="#FFF5E650" Offset="1" />
+                    <GradientStop Color="#FFF55656" Offset="0.181" />
+                    <GradientStop Color="#FF1CC723" Offset="0.429" />
+                    <GradientStop Color="#FF2DB7CD" Offset="0.714" />
+                </GradientStopCollection>
+                <RadialGradientBrush x:Key="RGBrushKey"
+                             Center="0.6,0.4"
+                             GradientStops="{StaticResource gsKey}" />
+                <LinearGradientBrush x:Key="LGBrushKey"
+                             EndPoint="1,0" StartPoint="0,0"
+                             GradientStops="{StaticResource gsKey}" />
+                <StackPanel x:Key="sp1" Background="Transparent">
+                    <Ellipse Width="50" Height="25"
+                     Fill="{StaticResource RGBrushKey}" Margin="2" />
+                    <TextBlock Text="Hello World" FontSize="10pt" Margin="2"
+                       Background="{StaticResource LGBrushKey}"/>
+                </StackPanel>
+                <Style TargetType="Rectangle">
+                    <Setter Property="Width" Value="250" />
+                    <Setter Property="Height" Value="200" />
+                    <Setter Property="Stroke" Value="Black" />
+                    <Setter Property="Margin" Value="0,0,5,0" />
+                </Style>
+            </StackPanel.Resources>
+            <Rectangle>
+                <Rectangle.Fill>
+                    <VisualBrush Visual="{StaticResource sp1}"
+                             Viewport="0,0,50,50" ViewportUnits="Absolute" TileMode="Tile"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle>
+                <Rectangle.Fill>
+                    <VisualBrush Visual="{StaticResource sp1}"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle>
+                <Rectangle.Fill>
+                    <VisualBrush Visual="{StaticResource sp1}"
+                             Viewport="0,0,50,50" ViewportUnits="Absolute" TileMode="Tile">
+                        <VisualBrush.RelativeTransform>
+                            <RotateTransform Angle="45" CenterX="0.5" CenterY="0.5" />
+                        </VisualBrush.RelativeTransform>
+                    </VisualBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+        </StackPanel>
+    </StackPanel>
+</Page>

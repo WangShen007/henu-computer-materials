@@ -1,0 +1,30 @@
+﻿<Page x:Class="ExampleWpfApp.Ch09.E06StoryboardAnimation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleWpfApp.Ch09"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StoryboardAnimation">
+    <TabControl>
+        <TabItem Header="Duration用法">
+            <Frame Source="E06_1_Duration.xaml"/>
+        </TabItem>
+        <TabItem Header="RepeatBehavior用法" >
+            <Frame Source="E06_2_RepeatBehavior.xaml"/>
+        </TabItem>
+        <TabItem Header="AutoReverse用法" >
+            <Frame Source="E06_3_AutoReverse.xaml"/>
+        </TabItem>
+        <TabItem Header="Ratio用法" >
+            <Frame Source="E06_4_Ratio.xaml"/>
+        </TabItem>
+        <TabItem Header="自动缩放" >
+            <Frame Source="E06_5_WidthAnimation.xaml"/>
+        </TabItem>
+        <TabItem Header="淡入淡出" >
+            <Frame Source="E06_6_OpacityAnimation.xaml"/>
+        </TabItem>
+    </TabControl>
+</Page>

@@ -1,0 +1,27 @@
+﻿@page
+@model WebAppExamples.Pages.Ch09.E09Model
+@{
+}
+@using (Html.BeginForm())
+{
+    <div class="mb-3 row">
+        <label for="txtUserName" class="col-sm-1 col-form-label">姓名</label>
+        <div class="col-auto">
+            <input type="text" name="txtUserName" class="form-control" />
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="txtAge" class="col-sm-1 col-form-label">年龄</label>
+        <div class="col-auto">
+            <input type="text" name="txtAge" class="form-control" />
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="col-sm-6">
+            <input type="submit" class="btn1 btn-primary col-sm-2 offset-3" value="提交" />
+        </div>
+    </div>
+}
+<div style="background-color:bisque">
+    @ViewData["result"]
+</div>

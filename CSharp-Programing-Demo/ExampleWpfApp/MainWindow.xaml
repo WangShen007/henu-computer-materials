@@ -1,0 +1,248 @@
+﻿<Window x:Class="ExampleWpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="主窗口" Height="450" Width="800" WindowState="Maximized">
+    <DockPanel>
+        <Grid Name="gridTitle" DockPanel.Dock="Top" Height="80">
+            <Image Source="/resources/images/img0.jpg" Stretch="Fill" />
+            <TextBlock Name="txtTitle" FontSize="24" FontWeight="Bold" Foreground="Red"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Text="《C#程序设计及应用教程》（第4版）"/>
+        </Grid>
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.Column="0" Grid.ColumnSpan="3" Fill="white" RadiusX="14" RadiusY="14" Stroke="Blue" StrokeDashArray="3" />
+            <Rectangle Grid.Column="0" Margin="7 7 0 7" Fill="#FFF3F8FD" RadiusX="10" RadiusY="10" Stroke="Blue" StrokeDashArray="3" />
+            <ScrollViewer Grid.Column="0" Margin="14,19,11,11" VerticalScrollBarVisibility="Visible">
+                <StackPanel Name="stackPanelLeft" MinWidth="235">
+                    <StackPanel.Resources>
+                        <Style x:Name="ButtonStyle" TargetType="Button">
+                            <Setter Property="Margin" Value="10 5 5 0" />
+                            <Setter Property="Padding" Value="5 0" />
+                            <Setter Property="BorderBrush" Value="{x:Null}" />
+                            <Setter Property="Foreground" Value="Blue" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                            <EventSetter Event="Click" Handler="Button_Click"/>
+                        </Style>
+                        <Style TargetType="Expander">
+                            <Setter Property="Background" Value="AliceBlue" />
+                            <Setter Property="Foreground" Value="Green" />
+                            <Setter Property="Margin" Value="5 5 5 0" />
+                            <Setter Property="IsExpanded" Value="False" />
+                        </Style>
+                        <Style TargetType="StackPanel">
+                            <Setter Property="Background" Value="White"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="默认页" Margin="0 5"/>
+                        <Button Content="全部展开" Margin="0 5"/>
+                        <Button Content="全部折叠" Margin="0 5"/>
+                    </StackPanel>
+                    <Expander Header="第1章 概述">
+                        <StackPanel>
+                            <Button Content="例1-1 [Console]Hello World ConsoleApp" Tag="Ch01/E01HelloWorldPage.xaml"/>
+                            <Button Content="例1-2 [WPF]Hello World WpfApp" Tag="Ch01/E02HelloWorldPage.xaml"/>
+                            <Button Content="例1-3 [Wpfz]Hello World Wpfz(WpfCustomControlLibrary)" Tag="Ch01/E03HelloWorldPage.xaml"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="第2章 控制台和WPF编程入门">
+                        <StackPanel>
+                            <Button Content="例2-1 [Console]求两个数的和" Tag="Ch02/E01AddPage.xaml"/>
+                            <Button Content="例2-2 [Console]求n个数的和" Tag="Ch02/E02SumPage.xaml"/>
+                            <Button Content="例2-3 [Console]数据的格式化输出" Tag="Ch02/E03DataOutputPage.xaml"/>
+                            <Button Content="例2-4 [WPF]Page、Window、TextBlock" Tag="Ch02/E04Page.xaml"/>
+                            <Button Content="例2-5 [WPF]MessageBox" Tag="Ch02/E05MessageBoxPage.xaml"/>
+                            <Button Content="例2-6 [WPF]TextBox、PasswordBox" Tag="Ch02/E06.xaml"/>
+                            <Button Content="例2-7 [WPF]调用DLL文件求n个数的和" Tag="Ch02/E07SumLibPage.xaml"/>
+                            <Button Content="例2-8 [WPF]利用用户控件呈现命名颜色" Tag="Ch02/E08ShowNamedColors.xaml"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="第3章 基本数据类型和流程控制语句">
+                        <StackPanel>
+                            <Button Content="例3-1 常量和变量" Tag="Ch03/E01.xaml"/>
+                            <Button Content="例3-2 枚举" Tag="Ch03/E02enum.xaml"/>
+                            <Button Content="例3-3 字符串" Tag="Ch03/E03string.xaml"/>
+                            <Button Content="例3-4 一维数组（统计）" Tag="Ch03/E04Array1.xaml"/>
+                            <Button Content="例3-5 一维数组（复制和排序）" Tag="Ch03/E05Array2.xaml"/>
+                            <Button Content="例3-6 二维数组" Tag="Ch03/E06Array3.xaml"/>
+                            <Button Content="例3-7 交错数组" Tag="Ch03/E07Array4.xaml"/>
+                            <Button Content="例3-8 类型转换" Tag="Ch03/E08convert.xaml"/>
+                            <Button Content="例3-9 if语句" Tag="Ch03/E09if.xaml"/>
+                            <Button Content="例3-10 switch语句" Tag="Ch03/E10switch.xaml"/>
+                            <Button Content="例3-11 for语句" Tag="Ch03/E11for.xaml"/>
+                            <Button Content="例3-12 foreach语句" Tag="Ch03/E12foreach.xaml"/>
+                            <Button Content="例3-13 while语句" Tag="Ch03/E13while.xaml"/>
+                            <Button Content="例3-14 do-while语句" Tag="Ch03/E14do_while.xaml"/>
+                            <Button Content="例3-15 try语句" Tag="Ch03/E15try_catch.xaml"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="第4章 面向对象编程基础">
+                        <StackPanel>
+                            <Button Content="例4-1 类的基本构造" Tag="Ch04/E01.xaml" />
+                            <Button Content="例4-2 this关键字" Tag="Ch04/E02thisKey.xaml" />
+                            <Button Content="例4-3 static关键字" Tag="Ch04/E03staticKey.xaml" />
+                            <Button Content="例4-4 方法" Tag="Ch04/E04Method.xaml" />
+                            <Button Content="例4-5 Lambda表达式" Tag="Ch04/E05Lambda.xaml" />
+                            <Button Content="例4-6 属性" Tag="Ch04/E06Property.xaml" />
+                            <Button Content="例4-7 委托" Tag="Ch04/E07Delegate.xaml" />
+                            <Button Content="例4-8 事件" Tag="Ch04/E08Event.xaml" />
+                            <Button Content="例4-9 WPF鼠标事件" Tag="Ch04/E09WpfEvent.xaml" />
+                            <Button Content="例4-10 结构" Tag="Ch04/E10struct.xaml" />
+                            <Button Content="例4-11 数学运算" Tag="Ch04/E11Math.xaml" />
+                            <Button Content="例4-12 日期时间处理" Tag="Ch04/E12DateTime.xaml" />
+                            <Button Content="例4-13 计时器" Tag="Ch04/E13DispatcherTimer.xaml" />
+                            <Button Content="例4-14 秒表" Tag="Ch04/E14Stopwatch.xaml" />
+                            <Button Content="例4-15 随机数" Tag="Ch04/E15Random.xaml" />
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="第5章 面向对象高级编程">
+                        <StackPanel>
+                            <Button Content="例5-1 基类与扩充类" Tag="Ch05/E01InheritSimple.xaml" />
+                            <Button Content="例5-2 方法重写" Tag="Ch05/E02override.xaml" />
+                            <Button Content="例5-3 base关键字" Tag="Ch05/E03base.xaml" />
+                            <Button Content="例5-4 构造函数的执行顺序" Tag="Ch05/E04construct.xaml" />
+                            <Button Content="例5-5 类继承-abstract关键字" Tag="Ch05/E05abstract.xaml" />
+                            <Button Content="例5-6 类继承-几何绘图" Tag="Ch05/E06DrawDemo.xaml" />
+                            <Button Content="例5-7 接口声明" Tag="Ch05/E07Interface.xaml" />
+                            <Button Content="例5-8 接口继承" Tag="Ch05/E08InterfaceInherit.xaml" />
+                            <Button Content="例5-9 泛型集合-初始化" Tag="Ch05/E09CollectionInit.xaml" />
+                            <Button Content="例5-10 泛型集合-列表和排序列表" Tag="Ch05/E10ListSortedList.xaml" />
+                            <Separator/>
+                            <Button Content="自学5-1 类封装-分部类" Tag="Ch05/Z01Partial.xaml" />
+                            <Button Content="自学5-2 类封装-密封类" Tag="Ch05/Z02Sealed.xaml" />
+                            <Button Content="自学5-3 类封装-嵌套类" Tag="Ch05/Z03Nested.xaml" />
+                            <Button Content="自学5-4 类封装-泛型类" Tag="Ch05/Z04Generic.xaml" />
+                            <Button Content="自学5-5 泛型集合-哈希集合" Tag="Ch05/Z05HashSet.xaml" />
+                            <Button Content="自学5-6 泛型集合-字典和排序字典" Tag="Ch05/Z06Dictionary.xaml" />
+                            <Button Content="自学5-7 泛型集合-队列" Tag="Ch05/Z07Queue.xaml" />
+                            <Button Content="自学5-8 泛型集合-堆栈" Tag="Ch05/Z08Stack.xaml" />
+                            <Button Content="自学5-9 泛型集合-链表" Tag="Ch05/Z09LinkedList.xaml" />
+                            <Button Content="自学5-10 泛型集合-自定义链表" Tag="Ch05/Z10CustomGeneric.xaml" />
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="第6章 数据流与文本文件读写">
+                        <StackPanel>
+                            <Button Content="例6-1 Environment类和DriveInfo类" Tag="Ch06/E01Environment.xaml" />
+                            <Button Content="例6-2 利用File类读写文本文件" Tag="Ch06/E02File.xaml" />
+                            <Button Content="例6-3 利用FileStream类读写文本文件" Tag="Ch06/E03FileStream.xaml" />
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="第7章 LINQ与数据库操作">
+                        <StackPanel>
+                            <Button Content="例7-1 【LINQ to Entities】初始化测试数据" Tag="Ch07/LinqToEntities/E01InitMyDb1.xaml" />
+                            <Button Content="例7-2 【LINQ to Entities】SQL-查询(SqlQuery)" Tag="Ch07/LinqToEntities/E02SqlQuery.xaml" />
+                            <Button Content="例7-3 【LINQ to Entities】SQL-插入更新删除(ExecuteSqlCommand)" Tag="Ch07/LinqToEntities/E03ExecuteSqlCommand.xaml" />
+                            <Button Content="例7-4 【LINQ to Entities】LINQ-查询" Tag="Ch07/LinqToEntities/E04.xaml" />
+                            <Button Content="例7-5 【LINQ to Entities】LINQ-插入更新删除" Tag="Ch07/LinqToEntities/E05.xaml" />
+                            <Button Content="例7-6 【LINQ to Entities】LINQ-综合示例" Tag="Ch07/LinqToEntities/E06.xaml" />
+                            <Separator/>
+                            <Button Content="自学7-1【LINQ to Objects】基本用法" Tag="Ch07/OtherDemos/LinqToObjects/DemoPage.xaml" />
+                            <Button Content="自学7-2【LINQ to XML】基本用法" Tag="Ch07/OtherDemos/LinqToXML/DemoPage.xaml" />
+                            <Button Content="自学7-3【LINQ to DataSet】初始化测试数据" Tag="Ch07/OtherDemos/LinqToDataSet/E01InitMyDb1.xaml" />
+                            <Button Content="自学7-4【LINQ to DataSet】SQL-查询(ExecuteReader)" Tag="Ch07/OtherDemos/LinqToDataSet/E02ExecuteReader.xaml" />
+                            <Button Content="自学7-5【LINQ to DataSet】SQL-插入更新删除(ExecuteNonQuery)" Tag="Ch07/OtherDemos/LinqToDataSet/E03ExecuteNonQuery.xaml" />
+                            <Button Content="自学7-6【LINQ to DataSet】LINQ-查询" Tag="Ch07/OtherDemos/LinqToDataSet/E04Page.xaml" />
+                            <Button Content="自学7-7【LINQ to DataSet】LINQ-插入更新删除" Tag="Ch07/OtherDemos/LinqToDataSet/E05Page.xaml" />
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="第8章 界面布局与控件">
+                        <StackPanel>
+                            <Button Content="例8-1 停靠面板（DockPanel）" Tag="Ch08/E01DockPanel.xaml" />
+                            <Button Content="例8-2 网格（Grid）" Tag="Ch08/E02Grid.xaml" />
+                            <Button Content="例8-3 单选（RadioButton）" Tag="Ch08/E03RadioButton.xaml" />
+                            <Button Content="例8-4 复选（CheckBox）" Tag="Ch08/E04CheckBox.xaml" />
+                            <Button Content="例8-5 列表框（ListBox）" Tag="Ch08/E05ListBox.xaml" />
+                            <Button Content="例8-6 下拉框（ComboBox）" Tag="Ch08/E06ComboBox.xaml" />
+                            <Button Content="例8-7 图像（Image）" Tag="Ch08/E07Image.xaml" />
+                            <Button Content="例8-8 按钮和图标按钮（Button、Buttonz）" Tag="Ch08/E08ButtonButtonz.xaml" />
+                            <Button Content="例8-9 媒体播放（MediaElement）" Tag="ch08/E09MediaElement.xaml"/>
+                            <Separator/>
+                            <Button Content="自学8-1 自定义窗口和消息框（Windowz、MessageBoxz）" Tag="Ch08/Z01WindowzMessageBoxz.xaml" />
+                            <Button Content="自学8-2 画布（Canvas）" Tag="Ch08/Z02Canvas.xaml" />
+                            <Button Content="自学8-3 分组框和选项卡（GroupBox、TabControl）" Tag="Ch08/Z03GroupBoxTabControl.xaml" />
+                            <Button Content="自学8-4 边界框和视图框（Border、ViewBox）" Tag="Ch08/Z04BorderViewBox.xaml" />
+                            <Button Content="自学8-5 输入-水印、多行（TextBox、PasswordBox）" Tag="Ch08/Z05TextBoxPasswordBox.xaml" />
+                            <Button Content="自学8-6 日历和日期选择（Calendar、DatePicker）" Tag="Ch08/Z06CalendarDatePicker.xaml" />
+                            <Button Content="自学8-7 滑动条（Slider）" Tag="Ch08/Z07Slider.xaml" />
+                            <Button Content="自学8-8 进度条（ProgressBar）" Tag="Ch08/Z08ProgressBar.xaml" />
+                            <Button Content="自学8-9 菜单和带图标的菜单（Menu）" Tag="Ch08/Z09Menu.xaml" />
+                            <Button Content="自学8-10 带图标的树形视图（TreeView）" Tag="Ch08/Z10TreeView.xaml" />
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="第9章 样式与动画">
+                        <StackPanel>
+                            <Button Content="例9-1 样式、资源字典" Tag="ch09/E01Style.xaml" />
+                            <Button Content="例9-2 控件模板" Tag="ch09/E02ControlTemplate.xaml" />
+                            <Button Content="例9-3 触发器" Tag="ch09/E03Trigger.xaml" />
+                            <Button Content="例9-4 基本动画-本地动画" Tag="ch09/E04LocalAnimation.xaml"/>
+                            <Button Content="例9-5 基本动画-时钟动画（随机生成大量对象）" Tag="ch09/E05ClockAnimation.xaml"/>
+                            <Button Content="例9-6 基本动画-故事板动画" Tag="ch09/E06StoryboardAnimation.xaml"/>
+                            <Separator/>
+                            <Button Content="自学9-1 关键帧动画（基本用法、样条曲线、缓动函数）" Tag="ch09/Z01KeyFrameAnimation.xaml"/>
+                            <Button Content="自学9-2 路径动画" Tag="ch09/Z02PathAnimation.xaml"/>
+                            <Button Content="自学9-3 变换" Tag="ch09/Z03Transform.xaml" />
+                            <Button Content="自学9-4 样式、模板、动画、变换综合示例（玩纸牌）" Tag="ch09/Z04PlayingCard.xaml" />
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="第10章 数据绑定和数据验证">
+                        <StackPanel>
+                            <Button Content="例10-1 数据绑定-绑定模式" Tag="ch10/E01BindingMode.xaml" />
+                            <Button Content="例10-2 数据绑定-ElementName、RelativeSource" Tag="ch10/E02.xaml"/>
+                            <Button Content="例10-3 数据绑定-速度计量表" Tag="ch10/E03Speedometer.xaml"/>
+                            <Button Content="例10-4 数据绑定-DataContext" Tag="ch10/E04DataContext.xaml" />
+                            <Button Content="例10-5 正则表达式匹配练习" Tag="ch10/E05Regex.xaml"/>
+                            <Button Content="例10-6 数据验证-自定义+正则表达式" Tag="ch10/E06Validation.xaml"/>
+                            <Separator/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="第11章 二维图形图像处理">
+                        <StackPanel>
+                            <Button Content="例11-1 形状-Shape" Tag="Ch11/E01Shape.xaml"/>
+                            <Button Content="例11-2 几何图-直线" Tag="ch11/E02LineGeometry.xaml"/>
+                            <Button Content="例11-3 几何图-矩形" Tag="ch11/E03RectangleGeometry.xaml"/>
+                            <Button Content="例11-4 几何图-椭圆" Tag="ch11/E04EllipseGeometry.xaml"/>
+                            <Button Content="例11-5 几何图-多边形" Tag="ch11/E05Polygon.xaml"/>
+                            <Button Content="例11-6 几何图-曲线" Tag="ch11/E06Arc.xaml"/>
+                            <Button Content="例13-7 空心字" Tag="ch11/E07TextToGeometry.xaml"/>
+                            <Button Content="例11-8 椭圆图像-ImageBrush" Tag="ch11/E08ImageBrush.xaml"/>
+                            <Button Content="例11-9 图形图像和视频-Drawing" Tag="ch11/E09Drawing.xaml"/>
+                            <Button Content="例11-10 视频文字和可视对象-Visual" Tag="ch11/E10Visual.xaml"/>
+                            <Separator/>
+                            <Button Content="自学11-1 复杂几何图形" Tag="ch11/Z01.xaml"/>
+                            <Button Content="自学11-2 图像处理" Tag="ch11/Z02.xaml"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="第12章 三维图形设计与呈现">
+                        <StackPanel>
+                            <Button Content="例12-1 三角形" Tag="ch12/E01.xaml"/>
+                            <Button Content="例12-2 场景观察器-V3dView" Tag="ch12/E02.xaml"/>
+                            <Button Content="例12-3 立方体半切面" Tag="ch12/E03.xaml"/>
+                            <Button Content="例12-4 模型" Tag="ch12/E04.xaml"/>
+                            <Button Content="例12-5 球体（地球）" Tag="ch12/E05.xaml"/>
+                            <Button Content="例12-6 立方体" Tag="ch12/E06.xaml"/>
+                            <Button Content="例12-7 模型组合" Tag="ch12/E07.xaml"/>
+                            <Separator/>
+                            <Button Content="自学12-1 模型变换（1）" Tag="ch12/Z01.xaml"/>
+                            <Button Content="自学12-2 模型变换（2）" Tag="ch12/Z02.xaml"/>
+                            <Button Content="自学12-3 3D动画基础" Tag="ch12/Z03.xaml"/>
+                        </StackPanel>
+                    </Expander>
+                </StackPanel>
+            </ScrollViewer>
+            <GridSplitter Grid.Column="1" ResizeBehavior="PreviousAndNext" Width="6" Background="Red" Margin="5 0 0 0" />
+            <Frame Name="frame1" Grid.Column="2"
+                   BorderThickness="2" BorderBrush="#FFA6C9FD" Margin="5 10 10 10"
+                   ScrollViewer.CanContentScroll="True"
+                   NavigationUIVisibility="Hidden" />
+        </Grid>
+    </DockPanel>
+</Window>

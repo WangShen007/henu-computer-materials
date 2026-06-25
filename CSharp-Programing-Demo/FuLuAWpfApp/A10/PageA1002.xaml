@@ -1,0 +1,43 @@
+﻿<Page x:Class="FuLuAWpfApp.A10.PageA1002"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FuLuAWpfApp.A10"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageA1002">
+    <Page.Resources>
+        <Style x:Key="txtStyle" TargetType="TextBox">
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip"
+    					Value="{Binding (Validation.Errors)[0].ErrorContent, RelativeSource={RelativeSource Self}}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <local:A1002Data x:Key="src1"/>
+    </Page.Resources>
+    <StackPanel Margin="20">
+        <Button Name="btn" Content="单击产生20个随机数" HorizontalAlignment="Left" Padding="10 5" Margin="10"/>
+        <GroupBox Header="20个随机数" Padding="10" Margin="10" BorderBrush="Blue" BorderThickness="2">
+            <TextBlock Name="textBlockNumbers" VerticalAlignment="Center"/>
+        </GroupBox>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Label Content="最小值："/>
+            <TextBox Name="txtMinValue" Style="{StaticResource txtStyle}"
+                      Text="{Binding Path=Min, Source={StaticResource src1},
+                            UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+            <Label Margin="30 0 0 0" Content="平均值："/>
+            <TextBox Name="txtAverageValue" Style="{StaticResource txtStyle}"
+                      Text="{Binding Path=Average, Source={StaticResource src1},
+                            UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+            <Label Margin="30 0 0 0" Content="最大值："/>
+            <TextBox Name="txtMaxValue" Style="{StaticResource txtStyle}"
+                      Text="{Binding Path=Max, Source={StaticResource src1},
+                            UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+        </StackPanel>
+    </StackPanel>
+</Page>

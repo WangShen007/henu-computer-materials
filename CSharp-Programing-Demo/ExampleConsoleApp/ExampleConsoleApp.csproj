@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58BBFCDA-1420-4E09-A014-43B934E7006B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ExampleConsoleApp</RootNamespace>
+    <AssemblyName>ExampleConsoleApp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ch01\Ch01Main.cs" />
+    <Compile Include="Ch01\E0101HelloWorld.cs" />
+    <Compile Include="Ch02\Ch02Main.cs" />
+    <Compile Include="Ch02\E01Add.cs" />
+    <Compile Include="Ch02\E02Sum.cs" />
+    <Compile Include="Ch02\E03DataOutput.cs" />
+    <Compile Include="Ch03\Ch03Main.cs" />
+    <Compile Include="Ch03\E01.cs" />
+    <Compile Include="Ch03\E02enum.cs" />
+    <Compile Include="Ch03\E03string.cs" />
+    <Compile Include="Ch03\E04Array1.cs" />
+    <Compile Include="Ch03\E05Array2.cs" />
+    <Compile Include="Ch03\E06Array3.cs" />
+    <Compile Include="Ch03\E07Array4.cs" />
+    <Compile Include="Ch03\E08convert.cs" />
+    <Compile Include="Ch03\E09if.cs" />
+    <Compile Include="Ch03\E10switch.cs" />
+    <Compile Include="Ch03\E11for.cs" />
+    <Compile Include="Ch03\E12foreach.cs" />
+    <Compile Include="Ch03\E13while.cs" />
+    <Compile Include="Ch03\E14do_while.cs" />
+    <Compile Include="Ch03\E15try_catch.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wpfz\Wpfz.csproj">
+      <Project>{3ec9638b-3fd0-4d17-a64e-2afb6b102412}</Project>
+      <Name>Wpfz</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

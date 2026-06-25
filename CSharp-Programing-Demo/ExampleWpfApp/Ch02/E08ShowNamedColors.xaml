@@ -1,0 +1,19 @@
+﻿<Page x:Class="ExampleWpfApp.Ch02.E08ShowNamedColors"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleWpfApp.Ch02"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="E08ShowNamedColors">
+    <DockPanel>
+        <TextBlock DockPanel.Dock="Top" Text="例2-8 [WPF]利用用户控件呈现命名颜色"/>
+        <Grid>
+            <ScrollViewer>
+                <WrapPanel Name="wrappanel1"/>
+            </ScrollViewer>
+        </Grid>
+    </DockPanel>
+
+</Page>

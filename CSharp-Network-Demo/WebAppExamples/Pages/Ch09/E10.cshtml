@@ -1,0 +1,44 @@
+﻿@page
+@model E10Model
+@{
+    var c1 = "col-sm-4 col-form-label";
+    var c2 = "col-auto";
+    var c3 = "form-control";
+}
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-3 row">
+                @Html.LabelFor(m => m.MyClass1.UserName, new { @class = c1 })
+                <div class="@c2">
+                    @Html.TextBoxFor(m => m.MyClass1.UserName, new { @class = c3 })
+                </div>
+            </div>
+            <div class="row">
+                @Html.LabelFor(m => m.MyClass1.UserPassword, new { @class = c1 })
+                <div class="@c2">
+                    @Html.PasswordFor(m => m.MyClass1.UserPassword, new { @class = c3 })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="mb-3 row">
+                @Html.LabelFor(m => m.MyClass1.OtherInfo, new { @class = c1 })
+                <div class="@c2">
+                    @Html.TextAreaFor(m => m.MyClass1.OtherInfo, new { @class = c3, @style = "height: 100px;" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="col-sm-6">
+            <input type="submit" class="btn1 btn-primary col-sm-2 offset-3" value="提交" />
+        </div>
+    </div>
+}
+<br/>
+<p>提交结果：</p>
+<div style="background-color:bisque">
+    @ViewData["result"]
+</div>

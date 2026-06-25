@@ -1,0 +1,69 @@
+﻿<Page x:Class="ExampleWpfApp.Ch09.E06_5_WidthAnimation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleWpfApp.Ch09"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="E06_5_WidthAnimation">
+    <Page.Resources>
+        <Storyboard x:Key="Storyboard1">
+            <DoubleAnimation Storyboard.TargetName="btn1"
+                    Storyboard.TargetProperty="Width" To="150"
+                    Duration="0:0:0.2" AutoReverse="True"
+                    RepeatBehavior="Forever" />
+            <DoubleAnimation Storyboard.TargetName="btn2"
+                    Storyboard.TargetProperty="Width" To="150"
+                    Duration="0:0:1" AutoReverse="True"
+                    RepeatBehavior="Forever" />
+        </Storyboard>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="20" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+    </Page.Resources>
+    <Page.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource Storyboard1}" />
+        </EventTrigger>
+    </Page.Triggers>
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Width="200" Height="100" BorderThickness="1"
+                BorderBrush="Green">
+            <StackPanel VerticalAlignment="Center">
+                <Button Name="btn1" Width="75" Height="30" Background="Red"
+                        Margin="5 10 5 10" />
+                <Button Name="btn2" Width="75" Height="30"
+                        Background="#FF4BA5F3" />
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="1" Width="260" Height="120" BorderThickness="1"
+                BorderBrush="Green">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                <StackPanel VerticalAlignment="Center">
+                    <Button Name="btn3" Width="75" Background="Red" />
+                    <Button Name="btn4" Width="75" Background="Green" />
+                </StackPanel>
+                <Separator Grid.Row="0" VerticalAlignment="Bottom"
+                        Background="Green" />
+                <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Button.Click="Button_Click" Grid.Row="1">
+                    <Button Name="beginButton" Content="开始" />
+                    <Button Name="stopButton" Content="停止" />
+                    <Button Name="pauseButton" Content="暂停" />
+                    <Button Name="resumeButton" Content="继续" />
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

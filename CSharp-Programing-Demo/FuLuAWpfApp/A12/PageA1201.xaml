@@ -1,0 +1,25 @@
+﻿<Page x:Class="FuLuAWpfApp.A12.PageA1201"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FuLuAWpfApp.A12"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageA1201">
+    <StackPanel>
+        <TextBlock FontSize="20" Margin="0 10">
+            【A.12.1】简要回答在WPF应用程序中，常用的摄像机类型有哪些？
+        </TextBlock>
+        <Separator/>
+        <TextBlock xml:space="preserve" LineHeight="20">
+【答】
+WPF提供了多种类型的摄像机，其中最常用的有两种：
+（1）透视像机（PerspectiveCamera类）
+（2）正交像机（OrthographicCamera类）
+这两个类都是从ProjectionCamera类继承而来的，而ProjectionCamera类又是从Camera类继承而来的。
+Camera和ProjectionCamera为其扩充类提供了基本的功能。
+PerspectiveCamera和OrthographicCamera提供了专用的功能。
+        </TextBlock>
+    </StackPanel>
+</Page>

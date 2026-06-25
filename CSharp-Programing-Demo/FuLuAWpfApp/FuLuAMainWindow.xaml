@@ -1,0 +1,147 @@
+﻿<Window x:Class="FuLuAWpfApp.FuLuAMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FuLuAWpfApp"
+        mc:Ignorable="d"
+        Title="附录A主窗口" WindowState="Maximized" Height="450" Width="800">
+    <DockPanel>
+        <Viewbox DockPanel.Dock="Top">
+            <Grid>
+                <Image Source="images/img1.jpg" Height="12" Stretch="Fill" />
+                <TextBlock Foreground="OrangeRed" Margin="30 0" FontSize="8"
+                           HorizontalAlignment="Center" VerticalAlignment="Center"
+                           Text="习题和上机练习（Z0102-12345678 张三）"/>
+            </Grid>
+        </Viewbox>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ScrollViewer Grid.Column="0" Margin="10" VerticalScrollBarVisibility="Visible">
+                <StackPanel Name="stackPanel1" DockPanel.Dock="Left" MinWidth="160">
+                    <StackPanel.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="Margin" Value="10 5 5 0" />
+                            <Setter Property="Padding" Value="5 0" />
+                            <Setter Property="BorderBrush" Value="{x:Null}" />
+                            <Setter Property="Foreground" Value="Blue" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                            <EventSetter Event="Click" Handler="Button_Click"/>
+                        </Style>
+                        <Style TargetType="Expander">
+                            <Setter Property="Background" Value="CadetBlue" />
+                            <Setter Property="Foreground" Value="White" />
+                            <Setter Property="Margin" Value="5 5 5 0" />
+                            <Setter Property="IsExpanded" Value="False" />
+                        </Style>
+                        <Style TargetType="StackPanel">
+                            <Setter Property="Background" Value="White"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="个人信息" Margin="0 5"/>
+                        <Button Content="全部展开" Margin="0 5"/>
+                        <Button Content="全部折叠" Margin="0 5"/>
+                    </StackPanel>
+                    <Expander Header="A01">
+                        <StackPanel>
+                            <Button Tag="A01/PageA0102.xaml" Content="A.1.2 简答题"/>
+                            <Button Tag="A01/PageA0103.xaml" Content="A.1.3 简答题"/>
+                            <Button Tag="A01/PageA0104.xaml" Content="A.1.4 编程题（Console）"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="A02">
+                        <StackPanel>
+                            <Button Tag="A02/PageA0201.xaml" Content="A.2.1 格式化输出(Console)"/>
+                            <Button Tag="A02/PageA0202.xaml" Content="A.2.2 字符显示（WPF）"/>
+                            <Button Tag="A02/PageA0203.xaml" Content="A.2.3 密码输入和显示（WPF）"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="A03">
+                        <StackPanel>
+                            <Button Tag="A03/PageA0301.xaml" Content="A.3.1 字符串处理（Console）"/>
+                            <Button Tag="A03/PageA0302.xaml" Content="A.3.2 字母判断（Console）"/>
+                            <Button Tag="A03/PageA0303.xaml" Content="A.3.3 类型转换（Console）"/>
+                            <Button Tag="A03/PageA0304.xaml" Content="A.3.4 数组排序和计算（Console）"/>
+                            <Button Tag="A03/PageA0305.xaml" Content="A.3.5 循环语句（Console）"/>
+                            <Button Tag="A03/PageA0306.xaml" Content="A.3.6 综合练习1-字符提取和整数整除（Console）"/>
+                            <Button Tag="A03/PageA0307.xaml" Content="A.3.7 综合练习2-求完数（Console）"/>
+                            <Button Tag="A03/PageA0308.xaml" Content="A.3.8 综合练习3-简单计算器（WPF）"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="A04">
+                        <StackPanel>
+                            <Button Tag="A04/PageA0401.xaml" Content="A.4.1 类和对象（Console）"/>
+                            <Button Tag="A04/PageA0402.xaml" Content="A.4.2 属性和方法（WPF）"/>
+                            <Button Tag="A04/PageA0403.xaml" Content="A.4.3 定时器和随机数（WPF）"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="A05">
+                        <StackPanel>
+                            <Button Tag="A05/PageA0501.xaml" Content="A.5.1 类继承-构造函数（WPF）"/>
+                            <Button Tag="A05/PageA0502.xaml" Content="A.5.2 类继承-虚拟和重写（WPF）"/>
+                            <Button Tag="A05/PageA0503.xaml" Content="A.5.3 泛型列表（WPF）"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="A06">
+                        <StackPanel>
+                            <Button Tag="A06/PageA0601.xaml" Content="A.6.1 判断目录是否存在（WPF）"/>
+                            <Button Tag="A06/PageA0602.xaml" Content="A.6.2 文本文件读写（WPF）"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="A07">
+                        <StackPanel>
+                            <Button Tag="A07/PageA0701.xaml" Content="A.7.1 简答题（WPF）"/>
+                            <Button Tag="A07/PageA0702.xaml" Content="A.7.2 数据库设计练习（WPF）"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="A08">
+                        <StackPanel>
+                            <Button Tag="A08/PageA0801.xaml" Content="A.8.1 用户登录练习（WPF）"/>
+                            <Button Tag="A08/PageA0802.xaml" Content="A.8.2 控件基本功能练习（WPF）"/>
+                            <Button Tag="A08/PageA0803.xaml" Content="A.8.3 数学测验过关小游戏（WPF）"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="A09">
+                        <StackPanel>
+                            <Button Tag="A09/PageA0901.xaml" Content="A.9.1 简易计算器样式设计（WPF）"/>
+                            <Button Tag="A09/PageA0902.xaml" Content="A.9.2 垂直柱状图动画练习（WPF）"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="A10">
+                        <StackPanel>
+                            <Button Tag="A10/PageA1001.xaml" Content="A.10.1 数据绑定-调色板设计（WPF）"/>
+                            <Button Tag="A10/PageA1002.xaml" Content="A.10.2 数据验证练习（WPF）"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="A11">
+                        <StackPanel>
+                            <Button Tag="A11/PageA1101.xaml" Content="A.11.1 图形按钮设计（WPF）"/>
+                            <Button Tag="A11/PageA1102.xaml" Content="A.11.2 三角形和矩形显示练习（WPF）"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="A12">
+                        <StackPanel>
+                            <Button Tag="A12/PageA1201.xaml" Content="A.12.1 简答题（WPF）"/>
+                            <Button Tag="A12/PageA1202.xaml" Content="A.12.2 简答题（WPF）"/>
+                        </StackPanel>
+                    </Expander>
+                </StackPanel>
+            </ScrollViewer>
+            <GridSplitter Grid.Column="1" ResizeBehavior="PreviousAndNext" Width="6" Background="Red" />
+            <Frame Name="frame1"
+                   Grid.Column="2"
+                   Margin="10"
+                   Source="PersonPage.xaml"
+                   BorderThickness="1"
+                   BorderBrush="Gray"
+                   ScrollViewer.CanContentScroll="True"
+                   NavigationUIVisibility="Hidden" />
+        </Grid>
+    </DockPanel>
+</Window>

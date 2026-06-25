@@ -1,0 +1,26 @@
+﻿<Page x:Class="ExampleWpfApp.Ch04.E06Property"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleWpfApp.Ch04"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="E06Property">
+    <StackPanel>
+        <TextBlock LineHeight="30" FontSize="18" Text="【例4-6】属性"/>
+        <TextBlock TextWrapping="Wrap" LineHeight="25">
+            请分别输入字母、负数、0-100的数、大于100的数进行测试：<LineBreak />
+        </TextBlock>
+        <Border BorderBrush="Blue" BorderThickness="2" HorizontalAlignment="Left" Padding="20 20 20 5">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Text="请输入成绩：" />
+                    <TextBox Name="textBoxGrade" Width="60" Margin="10 0" />
+                    <TextBlock Name="errorTip" Margin="5 0" Foreground="Red" Text="输入有错！" />
+                </StackPanel>
+                <Button Name="btnOK" Content="确定" Padding="10 0" Width="100" Margin="15" />
+            </StackPanel>
+        </Border>
+    </StackPanel>
+</Page>

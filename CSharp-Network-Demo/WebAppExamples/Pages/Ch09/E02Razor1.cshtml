@@ -1,0 +1,38 @@
+﻿@page
+@model WebAppExamples.Pages.Ch09.E02Razor1Model
+@{
+    ViewData["Title"] = "例10-2 Razor基本用法1";
+    int m = 5;
+    int n = 10;
+    var foreColor = "white";
+    var backColor = "red";
+}
+
+@*在CSS中使用@符号*@
+<style>
+    #div1 { color:@foreColor; background-color:@backColor; }
+</style>
+<div id="div1">div1：Hello World!</div>
+
+<h6 class="btn-primary">@Html.Raw("在HTML元素中使用@符号")</h6>
+<div>
+    m = 5, n = 10, m + n = @(m + n)
+</div>
+
+<h6 class="btn-primary">@Html.Raw("用@符号标识其后的变量或内联表达式")</h6>
+<p>用法1（变量右边有空格或能区分时，可直接写）:这是 @m 的结果。</p>
+<p>用法2（变量右边无空格或无法区分时，需要加括号）:这是@(m)的结果</p>
+<p>用法3（是表达式时，需要加括号）:这是@(m + n)的结果</p>
+
+<h6 class="btn-primary">@Html.Raw("在页面中直接编写C#语句")</h6>
+@{
+    var myMessage = "Hello";
+    var greeting = "欢迎访问!";
+    var weekDay = DateTime.Now.ToString("dddd");
+    var greetingMessage = $"{greeting} 今天是：{weekDay}";
+}
+<p>myMessage的值是：@myMessage</p>
+<p>@greetingMessage</p>
+
+<h6 class="btn-primary">@Html.Raw("包含特殊字符的用法")</h6>
+<p>@Html.Raw("<张三>说：\"今天天气真好！\"")</p>

@@ -1,0 +1,1398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A331CE1-2B2C-4A91-A39A-6B91B4525635}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ExampleWpfApp</RootNamespace>
+    <AssemblyName>ExampleWpfApp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.AeroLite">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Ch01\E01HelloWorldPage.xaml.cs">
+      <DependentUpon>E01HelloWorldPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch01\E02HelloWorldPage.xaml.cs">
+      <DependentUpon>E02HelloWorldPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch01\E03HelloWorldPage.xaml.cs">
+      <DependentUpon>E03HelloWorldPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch02\E08ShowNamedColors.xaml.cs">
+      <DependentUpon>E08ShowNamedColors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch04\Ch04UC.xaml.cs">
+      <DependentUpon>Ch04UC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch04\E01.xaml.cs">
+      <DependentUpon>E01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch04\E02thisKey.xaml.cs">
+      <DependentUpon>E02thisKey.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch04\E03staticKey.xaml.cs">
+      <DependentUpon>E03staticKey.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch04\E04Method.xaml.cs">
+      <DependentUpon>E04Method.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch04\E05Lambda.xaml.cs">
+      <DependentUpon>E05Lambda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch04\E06Property.xaml.cs">
+      <DependentUpon>E06Property.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch04\E07Delegate.xaml.cs">
+      <DependentUpon>E07Delegate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch04\E08Event.xaml.cs">
+      <DependentUpon>E08Event.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch04\E09WpfEvent.xaml.cs">
+      <DependentUpon>E09WpfEvent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch04\E10struct.xaml.cs">
+      <DependentUpon>E10struct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch04\E11Math.xaml.cs">
+      <DependentUpon>E11Math.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch04\E12DateTime.xaml.cs">
+      <DependentUpon>E12DateTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch04\E13DispatcherTimer.xaml.cs">
+      <DependentUpon>E13DispatcherTimer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch04\E14Stopwatch.xaml.cs">
+      <DependentUpon>E14Stopwatch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch04\E15Random.xaml.cs">
+      <DependentUpon>E15Random.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\Ch05UC.xaml.cs">
+      <DependentUpon>Ch05UC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\E01InheritSimple.xaml.cs">
+      <DependentUpon>E01InheritSimple.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\E06_4_DrawArrowLine.cs" />
+    <Compile Include="Ch05\Z01Partial.xaml.cs">
+      <DependentUpon>Z01Partial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\E05abstract.xaml.cs">
+      <DependentUpon>E05abstract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\Z02Sealed.xaml.cs">
+      <DependentUpon>Z02Sealed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\Z03Nested.xaml.cs">
+      <DependentUpon>Z03Nested.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\Z04Generic.xaml.cs">
+      <DependentUpon>Z04Generic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\E02override.xaml.cs">
+      <DependentUpon>E02override.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\E04construct.xaml.cs">
+      <DependentUpon>E04construct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\E03base.xaml.cs">
+      <DependentUpon>E03base.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\E06DrawDemo.xaml.cs">
+      <DependentUpon>E06DrawDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\E07Interface.xaml.cs">
+      <DependentUpon>E07Interface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\E08InterfaceInherit.xaml.cs">
+      <DependentUpon>E08InterfaceInherit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\E09CollectionInit.xaml.cs">
+      <DependentUpon>E09CollectionInit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\E10ListSortedList.xaml.cs">
+      <DependentUpon>E10ListSortedList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\Z05HashSet.xaml.cs">
+      <DependentUpon>Z05HashSet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\Z06Dictionary.xaml.cs">
+      <DependentUpon>Z06Dictionary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\Z07Queue.xaml.cs">
+      <DependentUpon>Z07Queue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\Z08Stack.xaml.cs">
+      <DependentUpon>Z08Stack.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\Z09LinkedList.xaml.cs">
+      <DependentUpon>Z09LinkedList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\Z10CustomGeneric.xaml.cs">
+      <DependentUpon>Z10CustomGeneric.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch06\Ch06UC.xaml.cs">
+      <DependentUpon>Ch06UC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch06\E01Environment.xaml.cs">
+      <DependentUpon>E01Environment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch06\E02File.xaml.cs">
+      <DependentUpon>E02File.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch06\E03FileStream.xaml.cs">
+      <DependentUpon>E03FileStream.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch07\LinqToEntities\E01InitMyDb1.xaml.cs">
+      <DependentUpon>E01InitMyDb1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch07\LinqToEntities\E02SqlQuery.xaml.cs">
+      <DependentUpon>E02SqlQuery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch07\LinqToEntities\E03ExecuteSqlCommand.xaml.cs">
+      <DependentUpon>E03ExecuteSqlCommand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch07\LinqToEntities\E04.xaml.cs">
+      <DependentUpon>E04.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch07\LinqToEntities\E05.xaml.cs">
+      <DependentUpon>E05.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch07\LinqToEntities\E06.xaml.cs">
+      <DependentUpon>E06.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch07\LinqToEntities\MyDb1Helps.cs" />
+    <Compile Include="Ch07\OtherDemos\LinqToObjects\DemoPage.xaml.cs">
+      <DependentUpon>DemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch07\OtherDemos\LinqToObjects\Demos.cs" />
+    <Compile Include="Ch07\OtherDemos\LinqToXML\DemoPage.xaml.cs">
+      <DependentUpon>DemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch07\OtherDemos\LinqToDataSet\E01InitMyDb1.xaml.cs">
+      <DependentUpon>E01InitMyDb1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch07\OtherDemos\LinqToDataSet\E02ExecuteReader.xaml.cs">
+      <DependentUpon>E02ExecuteReader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch07\OtherDemos\LinqToDataSet\E03ExecuteNonQuery.xaml.cs">
+      <DependentUpon>E03ExecuteNonQuery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch07\OtherDemos\LinqToDataSet\E04Page.xaml.cs">
+      <DependentUpon>E04Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch07\OtherDemos\LinqToDataSet\E05Page.xaml.cs">
+      <DependentUpon>E05Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\E09MediaElement.xaml.cs">
+      <DependentUpon>E09MediaElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\E06_5_WidthAnimation.xaml.cs">
+      <DependentUpon>E06_5_WidthAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\E06_6_OpacityAnimation.xaml.cs">
+      <DependentUpon>E06_6_OpacityAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch10\E05Regex.xaml.cs">
+      <DependentUpon>E05Regex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\E09Drawing.xaml.cs">
+      <DependentUpon>E09Drawing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CJ.cs">
+      <DependentUpon>MyDb1Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KC.cs">
+      <DependentUpon>MyDb1Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyDb1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDb1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyDb1Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDb1Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs">
+      <DependentUpon>MyDb1Model.tt</DependentUpon>
+    </Compile>
+    <Page Include="Ch01\E01HelloWorldPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch01\E02HelloWorldPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch01\E03HelloWorldPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch02\E01AddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch02\E02SumPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch02\E03DataOutputPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch02\E04Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch02\E04_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch02\E05MessageBoxPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch02\E06.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch02\E07SumLibPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch02\E08ShowNamedColors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch03\E01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch03\E02enum.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch03\E03string.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch03\E04Array1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch03\E05Array2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch03\E06Array3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch03\E07Array4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch03\E08convert.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch03\E09if.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch03\E10switch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch03\E11for.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch03\E12foreach.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch03\E13while.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch03\E14do_while.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch03\E15try_catch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch04\Ch04UC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch04\E01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch04\E02thisKey.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch04\E03staticKey.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch04\E04Method.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch04\E05Lambda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch04\E06Property.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch04\E07Delegate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch04\E08Event.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch04\E09WpfEvent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch04\E10struct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch04\E11Math.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch04\E12DateTime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch04\E13DispatcherTimer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch04\E14Stopwatch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch04\E15Random.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\Ch05UC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\E01InheritSimple.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\Z01Partial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\E05abstract.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\Z02Sealed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\Z03Nested.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\Z04Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\E02override.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\E04construct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\E03base.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\E06DrawDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\E07Interface.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\E08InterfaceInherit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\E09CollectionInit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\E10ListSortedList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\Z05HashSet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\Z06Dictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\Z07Queue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\Z08Stack.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\Z09LinkedList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch05\Z10CustomGeneric.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch06\Ch06UC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch06\E01Environment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch06\E02File.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch06\E03FileStream.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch07\LinqToEntities\E01InitMyDb1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch07\LinqToEntities\E02SqlQuery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch07\LinqToEntities\E03ExecuteSqlCommand.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch07\LinqToEntities\E04.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch07\LinqToEntities\E05.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch07\LinqToEntities\E06.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch07\OtherDemos\LinqToObjects\DemoPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch07\OtherDemos\LinqToXML\DemoPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch07\OtherDemos\LinqToDataSet\E01InitMyDb1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch07\OtherDemos\LinqToDataSet\E02ExecuteReader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch07\OtherDemos\LinqToDataSet\E03ExecuteNonQuery.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch07\OtherDemos\LinqToDataSet\E04Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch07\OtherDemos\LinqToDataSet\E05Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\E09MediaElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch08\Z01WindowzMessageBoxz.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\E02Grid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\Z04BorderViewBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\E01DockPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\Z03GroupBoxTabControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\Z02Canvas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\E08ButtonButtonz.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\Z05TextBoxPasswordBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\E03RadioButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\E04CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\E05ListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\E06ComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\E07Image.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\Z06CalendarDatePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\Z07Slider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\Z08ProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\Z09Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch08\Z10TreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch09\E01_Dictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch09\E01Style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch09\E02ControlTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch09\E03Trigger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch09\E06StoryboardAnimation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch09\E06_3_AutoReverse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch09\E06_1_Duration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch09\E06_4_Ratio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch09\E06_2_RepeatBehavior.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch09\E04LocalAnimation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch09\E05ClockAnimation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch09\E06_5_WidthAnimation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch09\E06_6_OpacityAnimation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch09\Z01KeyFrameAnimation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch09\Z01_EasingDoubleKeyFrame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch09\Z01_EasingFunction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch09\Z01_Spline.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch09\Z02PathAnimation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch09\Z03Transform.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch09\Z03_ScaleTransform.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch09\Z03_SkewTransform.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch09\Z03_TextAnimation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch09\Z03_TextEffect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch09\Z04PlayingCard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch09\Z04_H2Demo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch10\E01BindingMode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch10\E02.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Ch10\E04DataContext.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch10\E05Regex.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch10\E06Validation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch10\E03Speedometer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\E01Shape.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\E06Arc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\E04EllipseGeometry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\E02LineGeometry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\E05Polygon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\E03RectangleGeometry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\E09Drawing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\Z01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\Z01_CombinedGeometry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\Z01_GeometryGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\E08ImageBrush.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\E07TextToGeometry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\Z01_DrawingBrush.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\E10Visual.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\Z02.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\Z02_Demo1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\Z02_Demo2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\Z02_Demo3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\Z02_Demo4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\Z02_Demo5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch11\Z02_Demo6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ch12\E01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch12\E02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch12\E03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch12\E04.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch12\E05.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch12\E06.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch12\E07.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch12\Z01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch12\Z02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ch12\Z03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DefaultPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ch02\E01AddPage.xaml.cs">
+      <DependentUpon>E01AddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch02\E02SumPage.xaml.cs">
+      <DependentUpon>E02SumPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch02\E03DataOutputPage.xaml.cs">
+      <DependentUpon>E03DataOutputPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch02\E04Page.xaml.cs">
+      <DependentUpon>E04Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch02\E04_Window.xaml.cs">
+      <DependentUpon>E04_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch02\E05MessageBoxPage.xaml.cs">
+      <DependentUpon>E05MessageBoxPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch02\E06.xaml.cs">
+      <DependentUpon>E06.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch02\E07SumLibPage.xaml.cs">
+      <DependentUpon>E07SumLibPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch03\E01.xaml.cs">
+      <DependentUpon>E01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch03\E02enum.xaml.cs">
+      <DependentUpon>E02enum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch03\E03string.xaml.cs">
+      <DependentUpon>E03string.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch03\E04Array1.xaml.cs">
+      <DependentUpon>E04Array1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch03\E05Array2.xaml.cs">
+      <DependentUpon>E05Array2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch03\E06Array3.xaml.cs">
+      <DependentUpon>E06Array3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch03\E07Array4.xaml.cs">
+      <DependentUpon>E07Array4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch03\E08convert.xaml.cs">
+      <DependentUpon>E08convert.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch03\E09if.xaml.cs">
+      <DependentUpon>E09if.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch03\E10switch.xaml.cs">
+      <DependentUpon>E10switch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch03\E11for.xaml.cs">
+      <DependentUpon>E11for.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch03\E12foreach.xaml.cs">
+      <DependentUpon>E12foreach.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch03\E13while.xaml.cs">
+      <DependentUpon>E13while.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch03\E14do_while.xaml.cs">
+      <DependentUpon>E14do_while.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch03\E15try_catch.xaml.cs">
+      <DependentUpon>E15try_catch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch05\Z01_Student.P1.cs" />
+    <Compile Include="Ch05\Z01_Student.P2.cs" />
+    <Compile Include="Ch05\E06_3_DrawEllipse.cs" />
+    <Compile Include="Ch05\E06_1_DrawLine.cs" />
+    <Compile Include="Ch05\E06_0_DrawObjet.cs" />
+    <Compile Include="Ch05\E06_2_DrawRectangle.cs" />
+    <Compile Include="Ch05\E06_5_DrawSin.cs" />
+    <Compile Include="Ch08\Z01WindowzMessageBoxz.xaml.cs">
+      <DependentUpon>Z01WindowzMessageBoxz.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\E02Grid.xaml.cs">
+      <DependentUpon>E02Grid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\Z04BorderViewBox.xaml.cs">
+      <DependentUpon>Z04BorderViewBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\E01DockPanel.xaml.cs">
+      <DependentUpon>E01DockPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\Z03GroupBoxTabControl.xaml.cs">
+      <DependentUpon>Z03GroupBoxTabControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\Z02Canvas.xaml.cs">
+      <DependentUpon>Z02Canvas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\E08ButtonButtonz.xaml.cs">
+      <DependentUpon>E08ButtonButtonz.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\Z05TextBoxPasswordBox.xaml.cs">
+      <DependentUpon>Z05TextBoxPasswordBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\E03RadioButton.xaml.cs">
+      <DependentUpon>E03RadioButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\E04CheckBox.xaml.cs">
+      <DependentUpon>E04CheckBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\E05ListBox.xaml.cs">
+      <DependentUpon>E05ListBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\E06ComboBox.xaml.cs">
+      <DependentUpon>E06ComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\E07Image.xaml.cs">
+      <DependentUpon>E07Image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\Z06CalendarDatePicker.xaml.cs">
+      <DependentUpon>Z06CalendarDatePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\Z07Slider.xaml.cs">
+      <DependentUpon>Z07Slider.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\Z08ProgressBar.xaml.cs">
+      <DependentUpon>Z08ProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\Z09Menu.xaml.cs">
+      <DependentUpon>Z09Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch08\Z10TreeView.xaml.cs">
+      <DependentUpon>Z10TreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\E01Style.xaml.cs">
+      <DependentUpon>E01Style.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\E02ControlTemplate.xaml.cs">
+      <DependentUpon>E02ControlTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\E03Trigger.xaml.cs">
+      <DependentUpon>E03Trigger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\E06StoryboardAnimation.xaml.cs">
+      <DependentUpon>E06StoryboardAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\E06_3_AutoReverse.xaml.cs">
+      <DependentUpon>E06_3_AutoReverse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\E06_1_Duration.xaml.cs">
+      <DependentUpon>E06_1_Duration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\E06_4_Ratio.xaml.cs">
+      <DependentUpon>E06_4_Ratio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\E06_2_RepeatBehavior.xaml.cs">
+      <DependentUpon>E06_2_RepeatBehavior.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\E04LocalAnimation.xaml.cs">
+      <DependentUpon>E04LocalAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\E05ClockAnimation.xaml.cs">
+      <DependentUpon>E05ClockAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\Z01KeyFrameAnimation.xaml.cs">
+      <DependentUpon>Z01KeyFrameAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\Z01_EasingDoubleKeyFrame.xaml.cs">
+      <DependentUpon>Z01_EasingDoubleKeyFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\Z01_EasingFunction.xaml.cs">
+      <DependentUpon>Z01_EasingFunction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\Z01_Spline.xaml.cs">
+      <DependentUpon>Z01_Spline.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\Z02PathAnimation.xaml.cs">
+      <DependentUpon>Z02PathAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\Z03Transform.xaml.cs">
+      <DependentUpon>Z03Transform.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\Z03_ScaleTransform.xaml.cs">
+      <DependentUpon>Z03_ScaleTransform.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\Z03_SkewTransform.xaml.cs">
+      <DependentUpon>Z03_SkewTransform.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\Z03_TextAnimation.xaml.cs">
+      <DependentUpon>Z03_TextAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\Z03_TextEffect.xaml.cs">
+      <DependentUpon>Z03_TextEffect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\Z04PlayingCard.xaml.cs">
+      <DependentUpon>Z04PlayingCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch09\Z04_H2Demo.xaml.cs">
+      <DependentUpon>Z04_H2Demo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch10\E01BindingMode.xaml.cs">
+      <DependentUpon>E01BindingMode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch10\E02.xaml.cs">
+      <DependentUpon>E02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch10\E06Validation.xaml.cs">
+      <DependentUpon>E06Validation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch10\E03Speedometer.xaml.cs">
+      <DependentUpon>E03Speedometer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch10\E04DataContext.xaml.cs">
+      <DependentUpon>E04DataContext.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\E01Shape.xaml.cs">
+      <DependentUpon>E01Shape.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\E06Arc.xaml.cs">
+      <DependentUpon>E06Arc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\E04EllipseGeometry.xaml.cs">
+      <DependentUpon>E04EllipseGeometry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\E02LineGeometry.xaml.cs">
+      <DependentUpon>E02LineGeometry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\E05Polygon.xaml.cs">
+      <DependentUpon>E05Polygon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\E03RectangleGeometry.xaml.cs">
+      <DependentUpon>E03RectangleGeometry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\Z01.xaml.cs">
+      <DependentUpon>Z01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\Z01_CombinedGeometry.xaml.cs">
+      <DependentUpon>Z01_CombinedGeometry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\Z01_GeometryGroup.xaml.cs">
+      <DependentUpon>Z01_GeometryGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\E08ImageBrush.xaml.cs">
+      <DependentUpon>E08ImageBrush.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\E07TextToGeometry.xaml.cs">
+      <DependentUpon>E07TextToGeometry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\Z01_DrawingBrush.xaml.cs">
+      <DependentUpon>Z01_DrawingBrush.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\E10Visual.xaml.cs">
+      <DependentUpon>E10Visual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\Z02.xaml.cs">
+      <DependentUpon>Z02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\Z02_Demo1.xaml.cs">
+      <DependentUpon>Z02_Demo1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\Z02_Demo2.xaml.cs">
+      <DependentUpon>Z02_Demo2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\Z02_Demo3.xaml.cs">
+      <DependentUpon>Z02_Demo3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\Z02_Demo4.xaml.cs">
+      <DependentUpon>Z02_Demo4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\Z02_Demo5.xaml.cs">
+      <DependentUpon>Z02_Demo5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch11\Z02_Demo6.xaml.cs">
+      <DependentUpon>Z02_Demo6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch12\E01.xaml.cs">
+      <DependentUpon>E01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch12\E02.xaml.cs">
+      <DependentUpon>E02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch12\E03.xaml.cs">
+      <DependentUpon>E03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch12\E04.xaml.cs">
+      <DependentUpon>E04.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch12\E05.xaml.cs">
+      <DependentUpon>E05.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch12\E06.xaml.cs">
+      <DependentUpon>E06.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch12\E07.xaml.cs">
+      <DependentUpon>E07.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch12\Z01.xaml.cs">
+      <DependentUpon>Z01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch12\Z02.xaml.cs">
+      <DependentUpon>Z02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ch12\Z03.xaml.cs">
+      <DependentUpon>Z03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultPage.xaml.cs">
+      <DependentUpon>DefaultPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MyDb1Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDb1Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyDb1Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDb1Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="MyDb1Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MyDb1Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Ch05\代码图\CodeMapE06.dgml" />
+    <None Include="MyDb1DataSet.xsc">
+      <DependentUpon>MyDb1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyDb1DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyDb1DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MyDb1DataSet.xss">
+      <DependentUpon>MyDb1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyDb1Model.edmx.diagram">
+      <DependentUpon>MyDb1Model.edmx</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\apple.jpg" />
+    <Resource Include="Resources\Images\Earth08.png" />
+    <Resource Include="Resources\Images\img1.jpg" />
+    <Resource Include="Resources\Images\img2.jpg" />
+    <Resource Include="Resources\Images\img0.jpg" />
+    <Resource Include="Resources\Images\Koala.jpg" />
+    <Resource Include="Resources\gifFiles\drink.gif" />
+    <Resource Include="Resources\Images\tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wpfz\Wpfz.csproj">
+      <Project>{3ec9638b-3fd0-4d17-a64e-2afb6b102412}</Project>
+      <Name>Wpfz</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\bananas.jpg" />
+    <Resource Include="Resources\Images\sad.png" />
+    <Resource Include="Resources\Images\save.png" />
+    <Resource Include="Resources\gifFiles\earth.gif" />
+    <Resource Include="Resources\gifFiles\circle.gif" />
+    <Resource Include="Resources\gifFiles\working.gif" />
+    <Resource Include="Resources\Images\qq.png" />
+    <Resource Include="Resources\Images\qq1.png" />
+    <Resource Include="Resources\Images\qq2.png" />
+    <Content Include="MyDb1.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MyDb1Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MyDb1Model.edmx</DependentUpon>
+      <LastGenOutput>MyDb1Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MyDb1Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MyDb1Model.edmx</DependentUpon>
+      <LastGenOutput>MyDb1Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="MyDb1_log.ldf">
+      <DependentUpon>MyDb1.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ContentAudio\dj.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ContentAudio\ringin.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ContentImages\m1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ContentVideo\wildlife.wmv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ContentVideo\xbox.wmv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

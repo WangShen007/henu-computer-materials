@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebExamples</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebExamples.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container">
+        <div class="row" style="margin-right:-25px ">
+            <img src="/images/ch09/mainpage.jpg" style="width: 100%; height: 100px;" />
+        </div>
+    </div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div class="row">
+               <div class="col-md-3">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p><a asp-page="/Ch09/E01Welcome">例9-1：Welcome</a></p>
+                                    <p><a asp-page="/Ch09/E02Razor1">例9-2：razor基本语法1</a></p>
+                                    <p><a asp-page="/Ch09/E03Razor2">例9-3：razor基本语法2</a></p>
+                                    <p><a asp-page="/Ch09/E04Text">例9-4：text前缀</a></p>
+                                    <p><a asp-page="/Ch09/E05bg">例9-5：bg前缀</a></p>
+                                    <p><a asp-page="/Ch09/E06btn">例9-6：btn前缀</a></p>
+                                    <p><a asp-page="/Ch09/E07grid1">例9-7：栅格用法1</a></p>
+                                    <p><a asp-page="/Ch09/E08grid2">例9-8：栅格用法2</a></p>
+                                    <p><a asp-page="/Ch09/E09">例9-9：form</a></p>
+                                    <p><a asp-page="/Ch09/E10">例9-10：文本框密码框</a></p>
+                                    <p><a asp-page="/SY10/SY10Index">实验10：图片轮播</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bodyContent" class="col-md-9 pt-3 border">
+                    @RenderBody()
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - 《C#网络应用编程》第4版   WebExamples
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

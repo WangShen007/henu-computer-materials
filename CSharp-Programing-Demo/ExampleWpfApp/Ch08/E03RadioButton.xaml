@@ -1,0 +1,67 @@
+﻿<Page x:Class="ExampleWpfApp.Ch08.E03RadioButton"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleWpfApp.Ch08"
+      xmlns:z="clr-namespace:Wpfz;assembly=Wpfz"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RadioButtonDemo">
+    <StackPanel>
+        <GroupBox Header="基本用法" Margin="10" BorderBrush="Blue" BorderThickness="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.ColumnSpan="2"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Text="说明：每个参赛人员只能参加一个比赛项目"/>
+                <GroupBox Header="参赛人员" Margin="5" Grid.Row="1">
+                    <StackPanel RadioButton.Checked="Group1_Checked">
+                        <RadioButton>人员1</RadioButton>
+                        <RadioButton>人员2</RadioButton>
+                        <RadioButton>人员3</RadioButton>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Grid.Row="1" Grid.Column="1" Header="参赛项目" Margin="5">
+                    <StackPanel RadioButton.Checked="Group2_Checked">
+                        <RadioButton>项目1</RadioButton>
+                        <RadioButton>项目2</RadioButton>
+                        <RadioButton>项目3</RadioButton>
+                    </StackPanel>
+                </GroupBox>
+                <TextBlock Grid.Row="2" Grid.ColumnSpan="2"
+                           Name="resultTextBlock"
+                           HorizontalAlignment="Stretch"
+                           VerticalAlignment="Center" Background="AliceBlue"
+                           Text="选择的结果：" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="更多用法" Margin="10" Padding="0 10" BorderBrush="Blue" BorderThickness="2">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <RadioButton Style="{StaticResource RadioButtonBoxStyle}" Margin="1">近3天</RadioButton>
+                    <RadioButton Style="{StaticResource RadioButtonBoxStyle}" Margin="1">近7天</RadioButton>
+                    <RadioButton Style="{StaticResource RadioButtonBoxStyle}" Margin="1">本月</RadioButton>
+                    <RadioButton Style="{StaticResource RadioButtonBoxStyle}" Margin="1">自定义</RadioButton>
+                    <RadioButton Style="{StaticResource RadioButtonBoxStyle}" Margin="1">2017.01.01-2018.12.31</RadioButton>
+                </StackPanel>
+                <StackPanel Height="Auto" Orientation="Horizontal">
+                    <RadioButton Margin="3" z:Attach.IconzSize="18">男</RadioButton>
+                    <RadioButton Margin="3" z:Attach.IconzSize="20">女</RadioButton>
+                    <RadioButton Margin="3" IsChecked="{x:Null}" z:Attach.IconzSize="22">其他</RadioButton>
+                    <RadioButton Margin="3" IsEnabled="False">禁用(未选中)</RadioButton>
+                    <RadioButton Margin="3" IsEnabled="False" IsChecked="{x:Null}">禁用(选中)</RadioButton>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+    </StackPanel>
+</Page>

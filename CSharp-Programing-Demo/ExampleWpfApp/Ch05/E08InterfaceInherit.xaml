@@ -1,0 +1,16 @@
+﻿<Page x:Class="ExampleWpfApp.Ch05.E08InterfaceInherit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleWpfApp.Ch05"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="E08InterfaceInherit">
+    <DockPanel>
+        <TextBlock DockPanel.Dock="Top" Text="【例5-8】接口继承"/>
+        <GroupBox Header="执行结果" BorderBrush="Blue" BorderThickness="1" Margin="20 0 20 20">
+            <TextBlock Name="result" Background="Beige"/>
+        </GroupBox>
+    </DockPanel>
+</Page>
